@@ -1,0 +1,8 @@
+Contaminant,Unit,Date Tested,MCL (MRDL),MCLG (MRDLG),Level Found,Range,Violation,Typical Source of Contaminants
+Barium,ppm,2024,2,2,0.016,0.016-0.016,NO,Discharge of drilling wastes; discharge from metal refineries; erosion of natural deposits
+Fluoride,ppm,Daily,4,4,0.89,0.7-1.03,NO,Erosion of natural deposits; water additive which promotes strong teeth; discharge from fertilizer and aluminum factories
+Nitrate,ppm,Monthly,10,10,1.9,0.0-1.45,NO,"Runoff from fertilizer use; leaching from septic tanks, sewage; erosion of natural deposits"
+Turbidity,NTU,Continuous,0.3,<0.10,0.19,0.01-0.19,NO,Soil runoff; sediment from the lake bottom
+Turbidity (% meeting standard),%,2024,N/A,TT,100%,100%,NO,Soil runoff; sediment from the lake bottom
+Total Organic Carbon,ratio,Monthly,N/A,TT removal >1,1.4,1.1-2.0,NO,Naturally present in the environment
+Manganese,ppb,Weekly,SMCL=50,N/A,0.0129,0-0.03,NO,Erosion of natural deposits

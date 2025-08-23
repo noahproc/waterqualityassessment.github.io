@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erie County Water Quality Report</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <nav>
+        <div class="logo">
+            <img src="wave.jpg" alt="Erie County Logo">
+            <a href="#">Erie County Water Resources</a>
+        </div>
+        <div class="nav-links">
+            <a class="selected" href="index.html">Home</a>
+            <a href="data.html">Data Figures</a>
+            <a href="about.html">About</a>
+        </div>
+        
+    </nav>
+
+    <div class="main">
+        <div class="info">
+            <h1>Erie County Water Quality Ranking</h1>
+            <p>2024 Report</p>
+            <button id="toggleButton">Click to Reveal</button>
+             <div id="revealedContent">
+                <div class="rating-circle">5</div>
+                <section class="scroll-section fade-out" id="section1">
+                    <div class="ranking-details">
+                        <h3>Ranking Details</h3>
+                        <p><strong>Overall Score:</strong> 85/100</p>
+                        <p><strong>Limiting Factor:</strong> Total Trihalomethanes (TTHM)</p>
+                        <p>Our water quality is rated 5 out of 5 stars, indicating excellent compliance with safety standards. While most contaminants are well below legal limits, the primary factor preventing a perfect score is the level of TTHMs, which are common disinfection byproducts.</p>
+                </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="footer">© 2024 Erie County Water Quality Report</p>
+        <p class="footer">Developed by Noah Proctor</a></p>
+    </div>    
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', () => {
+        document.getElementById('revealedContent').classList.toggle('is-visible');
+    });
+    </script>
+</body>
+</html>

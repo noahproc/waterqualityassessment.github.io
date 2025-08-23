@@ -1,0 +1,289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    padding: 20px 148px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-links a {
+    transition: all 0.3s ease;
+    color: black;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.selected {
+    color: gray;
+    transform: scale(1.1);
+}
+
+/* Click to Reveal Section */
+
+.main {
+    padding: 40px 148px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    flex-grow: 1; /* Allow main content to fill available space */
+}
+
+#revealedContent {
+    /* Start with content invisible and ready for transition */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-height: 0; /* Collapse the element when hidden */
+    overflow: hidden;
+}
+
+#revealedContent.is-visible {
+    /* When visible, fade it in and expand its height */
+    opacity: 1;
+    max-height: 500px; /* Adjust if your content is taller */
+}
+
+.main .info h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.main .info p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#toggleButton {
+    width: 150px;
+    height: 150px;
+    background-color: #004242;
+    color: white;
+    border: none;
+    border-radius: 50%; /* This makes it a circle */
+    cursor: pointer;
+    font-size: 20px; /* Larger font size */
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#revealedContent {
+    gap: 50px;
+    max-height: 500px;
+}
+
+.rating-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #163805; 
+    border-radius: 50%;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.ranking-details {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: white;
+    color: black;
+    padding: 20px 100px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.about-info ul {
+  margin: 1rem 0 1.25rem 1.25rem; 
+  padding-left: 0;                 
+  list-style: disc;
+}
+
+.about {
+    padding: 40px 148px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: left;
+    flex-grow: 1;
+}
+
+.about .about-info h1 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-info ul li {
+  margin: 0.5rem 0;
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.about .about-info p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-top: 30px;  
+  text-align: left;
+}
+
+/* start hidden */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 450ms ease, transform 450ms ease;
+  will-change: opacity, transform;
+}
+
+/* when visible */
+.fade-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.block img {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Adjust as needed */
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.frame {
+    display: block;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    transition: all 1s;
+}
+#hand0 {
+    padding: 55px 155px 55px 155px;
+    background-color: white;
+}
+.frameHide {
+  opacity: 0;
+  left: -100%;
+}
+
+.frameShow {
+  opacity: 1;
+  left: 0;
+}
+
+/* 1) Base block (comes first) */
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.block.columns {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* each column content centered */
+.block.columns .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* circle + label */
+.data-circle {
+  width: 200px;
+  height: 200px;
+  background-color: #264348;
+  border-radius: 50%;
+  color: white;
+  font-size: 65px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px auto 8px;
+  margin-top: 30px;
+}
+
+/* this targets the <p class="data-text"> directly */
+.data-text {
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  color: black;
+  margin-top: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Creates three equal columns */
+  gap: 20px; /* Adds space between columns */
+}

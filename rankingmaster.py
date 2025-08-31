@@ -74,7 +74,7 @@ subs["Mn"]      = sub_lower_is_better(get_value("Mn"), limit=50)
 subs["Cu"]      = sub_lower_is_better(get_value("Cu"), limit=1.3) # Action Level for Copper is 1.3 mg/L
 subs["Pb"]      = sub_lower_is_better(get_value("Pb"), limit=15)  # Action Level for Lead is 15 ppb
 
-# === 4) Weights (tweak as needed) ===
+# === 4) Weights ===
 # Adjusted weights to include new contaminants and remove unavailable ones
 weights = {
     "Ecoli": 0.25, "TTHM": 0.15, "HAA5": 0.10, "Nitrate": 0.10,
@@ -118,7 +118,7 @@ else:
         "limiting_factor": limiting_factor
     }])
     
-    # Add the subscores for transparency
+    # Add the subscores
     for k, v in valid_subs.items():
         summary[f"subscore_{k}"] = v
 

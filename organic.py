@@ -30,7 +30,7 @@ width = 0.35
 
 fig, ax = plt.subplots(figsize=(10, 7))
 
-# Draw standard bars, which will not have rounded corners but will not cause an error.
+# Draw standard bars
 p1 = ax.bar(ind - width/2, level_found, width, label='Levels Found', color='#367588')
 p2 = ax.bar(ind + width/2, mcl, width, label='Maximum Contaminant Level (MCL)', color= '#2f4f4f')
 
